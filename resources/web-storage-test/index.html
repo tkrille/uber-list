@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WS Test</title>
+</head>
+<body>
+
+	<button onclick="show();">Show</button>
+	<button onclick="initialize();">Reset</button>
+
+	<script type="text/javascript">
+		var st = localStorage;
+		
+		function clear() {
+			st.clear();
+		}
+		
+		function initialize () {
+			console.log("initialize");
+			clear();
+			st.setItem('ul.settings', '{}');
+			st.setItem('ul.data.root', '{}');
+		}
+
+		function show() {
+			for ( var index = 0; index < st.length; index++) {
+				var key = st.key(index);
+				var value = st.getItem(key);
+
+				console.log(key + " = " + value);
+
+				
+			}
+		}
+		
+		if (st.length === 0) {
+			initialize ();	
+		}
+	</script>
+</body>
+</html>
