@@ -6,37 +6,24 @@
 </head>
 <body>
 
-	<button onclick="show();">Show</button>
-	<button onclick="initialize();">Reset</button>
+	<button onclick="ul.test();">Test</button>
+	<button onclick="ul.objectStorage.debug();">Debug</button>
+	<button onclick="ul.initialize();">Reset</button>
+	<button onclick="ul.objectStorage.clear();">Clear</button>
 
-	<script type="text/javascript">
-		var st = localStorage;
-		
-		function clear() {
-			st.clear();
-		}
-		
-		function initialize () {
-			console.log("initialize");
-			clear();
-			st.setItem('ul.settings', '{}');
-			st.setItem('ul.data.root', '{}');
-		}
+	<script type="text/javascript"
+		src="/resources/web-storage-test/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript"
+		src="/resources/web-storage-test/underscore.js"></script>
+	<script type="text/javascript"
+		src="/resources/web-storage-test/underscore.string.js"></script>
+	<script type="text/javascript"
+		src="/resources/web-storage-test/backbone.js"></script>
 
-		function show() {
-			for ( var index = 0; index < st.length; index++) {
-				var key = st.key(index);
-				var value = st.getItem(key);
+	<script type="text/javascript" src="ObjectStorage.js"></script>
+	<script type="text/javascript" src="model.js"></script>
 
-				console.log(key + " = " + value);
-
-				
-			}
-		}
-		
-		if (st.length === 0) {
-			initialize ();	
-		}
-	</script>
+	<script type="text/javascript" src="test-data.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
