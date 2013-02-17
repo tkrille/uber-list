@@ -1,7 +1,15 @@
 'use strict';
 
-/* Controllers */
+angular.module('uber-list').
 
+controller('ListsCtrl', [ '$scope', function($scope) {
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
+} ]).
+
+controller('SettingsCtrl', [ '$scope', function($scope) {
+
+} ]).
+
+controller('TemplatesCtrl', [ '$scope', function($scope) {
+
+} ]);

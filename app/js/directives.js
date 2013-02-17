@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('ul.directives', []);
+angular.module('uber-list.directives', []);

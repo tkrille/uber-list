@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('ul.services', []);
+angular.module('uber-list.services', []);

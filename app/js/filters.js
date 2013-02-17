@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('ul.filters', []);
+angular.module('uber-list.filters', []);
