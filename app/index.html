@@ -1,26 +1,24 @@
 <!doctype html>
-<html lang="en" ng-app="uber-list">
+<html lang="en" ng-app="uber-list" ng-controller="UberListCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Uber List</title>
-<link href="/app/css/angular-ui.css" rel="stylesheet" type="text/css" />
-<link href="/app/css/app.css" rel="stylesheet" type="text/css" />
-<link href="/app/css/bootstrap-responsive.css" rel="stylesheet"
-	type="text/css" />
-<link href="/app/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<base href="app" />
+<link href="css/angular-ui.css" rel="stylesheet" type="text/css" />
+<link href="css/app.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<button type="button" class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
-				<a class="brand" href="/">Uber List</a>
+				<a class="brand" href="index.html">Uber List</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li><a href="#/lists">My Lists</a></li>
@@ -32,21 +30,38 @@
 		</div>
 	</div>
 
-	<div ng-view></div>
+	<div class="container" ng-view></div>
+	
+	<footer class="footer">
+		<div class="container">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a luctus est.</p>
+			<p>Curabitur sit amet arcu a est laoreet consectetur.</p>
+			<p>Aliquam erat volutpat. Donec tincidunt, sem at euismod, diam gravida, ac ullamcorper felis velit eget metus.</p>
+			<p>Morbi blandit tristique lectus a aliquet. Duis molestie egestas feugiat.</p>
+		</div>
+	</footer>
 
-	<script type="text/javascript"
-		src="/app/lib/jquery/jquery-1.9.1.min.js"></script>
-	<script src="lib/angular/angular.js"></script>
+	<script type="text/javascript" src="lib/jquery/jquery-1.9.1.min.js"></script>
 
-	<script src="lib/los4ng/los4ng.js"></script>
+	<script type="text/javascript" src="lib/underscore/underscore.js"></script>
+	<script type="text/javascript" src="lib/underscore/underscore.string.js"></script>
 
-	<script src="js/app.js"></script>
+	<script type="text/javascript" src="lib/angular/angular.js"></script>
+	<script type="text/javascript" src="lib/angular/angular-sanitize.js"></script>
 
-	<script src="js/controllers.js"></script>
-	<script src="js/routes.js"></script>
-	<script src="js/services.js"></script>
-	<script src="js/directives.js"></script>
-	<script src="js/filters.js"></script>
+	<script type="text/javascript" src="lib/angular-ui/angular-ui-ieshiv.js"></script>
+	<script type="text/javascript" src="lib/angular-ui/angular-ui.js"></script>
+	<script type="text/javascript" src="lib/angular-ui-bootstrap/ui-bootstrap-tpls-0.1.0.js"></script>
 
+	<script type="text/javascript" src="lib/los4ng/los4ng.js"></script>
+
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
+	<script type="text/javascript" src="js/services.js"></script>
+	<script type="text/javascript" src="js/routes.js"></script>
+	<script type="text/javascript" src="js/directives.js"></script>
+	<script type="text/javascript" src="js/filters.js"></script>
+
+	<script type="text/javascript" src="js/test-data.js"></script>
 </body>
 </html>

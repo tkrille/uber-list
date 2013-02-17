@@ -1,6 +1,4 @@
-window.ul = window.ul || {};
-
-window.ul.testData = [
+angular.module('uber-list').value('testData', [
 
 		// root element (parent == null)
 		{
@@ -51,4 +49,4 @@ window.ul.testData = [
 			parent : "58b66034-a12a-4c5b-85d3-af16e35aa843",
 		},
 
-];
+]);

@@ -91,7 +91,7 @@
 	}
 
 	function fromJson(json) {
-	    return angular.fromJson(result);
+	    return angular.fromJson(json);
 	}
     } ]);
 
