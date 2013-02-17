@@ -10,7 +10,9 @@
      * compresses this string. It does not extend the base functions of the
      * Local Storage, it is still a key-value store!
      */
-    angular.module('los4ng', [ 'ng' ]).factory('los4ng', [ '$log', '$cacheFactory', '$window', function($log, $cacheFactory, $window) {
+    angular.module('los4ng', ['ng']).
+
+    factory('los4ng', [ '$log', '$cacheFactory', '$window', function($log, $cacheFactory, $window) {
 	var st = $window.localStorage;
 
 	return {
@@ -24,7 +26,7 @@
 	    },
 
 	    length : function() {
-		return st.length();
+		return st.length;
 	    },
 
 	    debug : function() {
@@ -32,7 +34,7 @@
 		    var key = st.key(index);
 		    var value = st.getItem(key);
 
-		    $log.debug(key + " = " + value);
+		    $log.log(key + " = " + value);
 
 		}
 	    },
