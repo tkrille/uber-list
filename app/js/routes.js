@@ -5,7 +5,7 @@ angular.module('uber-list').
 config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/add', {
 		templateUrl: 'partials/add.html',
-		controller: 'ListsCtrl'
+		controller: 'AddCtrl'
 	});
 	
 	$routeProvider.when('/add/list', {
@@ -39,6 +39,11 @@ config(['$routeProvider', function($routeProvider) {
 	});
 	
 	$routeProvider.when('/lists', {
+		templateUrl: 'partials/view.html',
+		controller: 'ListsCtrl'
+	});
+	
+	$routeProvider.when('/lists/:uuid', {
 		templateUrl: 'partials/view.html',
 		controller: 'ListsCtrl'
 	});

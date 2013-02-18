@@ -1,19 +1,19 @@
 <div class="row-fluid">
 	<div class="span12">
-		<form>
+		<form ng-submit="storeEntry( entry )">
 			<fieldset>
 				<legend>Add a Text</legend>
 				<label>Name</label>
-				<input ng-model="name" type="text" placeholder="Type something">
+				<input ng-model="entry.name" type="text" placeholder="Type something">
 				
 				<label>Type</label>
-				<select ng-model="options.type">
+				<select ng-model="entry.options.type">
 					<option value="single">Single Line</option>
 					<option value="multi">Multi Line</option>
 					<option value="code">Code</option>
 				</select>
 				
-				<ng-switch on="options.type">
+				<ng-switch on="entry.options.type">
 					<div ng-switch-when="single">
 						<label>Text</label>
 						<input ng-model="value" type="text" placeholder="Type something">
@@ -29,7 +29,7 @@
 				</ng-switch>
 				
 				<label>Semantic</label>
-				<input ng-model="semantic" type="text" placeholder="e.g. headline">
+				<input ng-model="entry.semantic" type="text" placeholder="e.g. headline">
 				
 				<button type="submit" class="btn">Submit</button>
 			</fieldset>
