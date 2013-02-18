@@ -1,7 +1,6 @@
 /* app css stylesheet */
 body {
     position: relative;
-    padding-top: 40px;
 }
 
 .footer {
@@ -12,3 +11,10 @@ body {
     background-color: #222222;
     color: #eeeeee;
 }
+
+#list {
+	margin-top: 50px;
+}
+
+/* overrides */
+.navbar .brand.pull-right { float: right; }

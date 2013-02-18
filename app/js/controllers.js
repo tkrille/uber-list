@@ -56,4 +56,10 @@ controller('SettingsCtrl', [ '$scope', function($scope) {
 
 controller('TemplatesCtrl', [ '$scope', function($scope) {
 
+} ]).
+
+controller('TextAddCtrl', [ '$scope', function($scope) {
+	$scope.options = {
+		type : 'single'
+	};
 } ]);

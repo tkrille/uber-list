@@ -1,0 +1,6 @@
+#list {
+	margin-top: 50px;
+}
+
+/* overrides */
+.navbar .brand.pull-right { float: right; }

@@ -1,0 +1,38 @@
+<div class="row-fluid">
+	<div class="span12">
+		<form>
+			<fieldset>
+				<legend>Add a Text</legend>
+				<label>Name</label>
+				<input ng-model="name" type="text" placeholder="Type something">
+				
+				<label>Type</label>
+				<select ng-model="options.type">
+					<option value="single">Single Line</option>
+					<option value="multi">Multi Line</option>
+					<option value="code">Code</option>
+				</select>
+				
+				<ng-switch on="options.type">
+					<div ng-switch-when="single">
+						<label>Text</label>
+						<input ng-model="value" type="text" placeholder="Type something">
+					</div>
+					<div ng-switch-when="multi">
+						<label>Text</label>
+						<textarea ng-model="value" rows="3"></textarea>
+					</div>
+					<div ng-switch-when="code">
+						<label>Text</label>
+						<textarea ng-model="value" ui-codemirror="{theme:'monokai'}"></textarea>
+					</div>
+				</ng-switch>
+				
+				<label>Semantic</label>
+				<input ng-model="semantic" type="text" placeholder="e.g. headline">
+				
+				<button type="submit" class="btn">Submit</button>
+			</fieldset>
+		</form>
+	</div>
+</div>

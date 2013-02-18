@@ -2,20 +2,48 @@
 
 angular.module('uber-list').
 
-config([ '$routeProvider', function($routeProvider) {
-    $routeProvider.when('/lists', {
-	templateUrl : 'partials/lists.html',
-	controller : 'ListsCtrl'
-    });
-    $routeProvider.when('/settings', {
-	templateUrl : 'partials/partial2.html',
-	controller : 'SettingsCtrl'
-    });
-    $routeProvider.when('/templates', {
-	templateUrl : 'partials/partial2.html',
-	controller : 'TemplatesCtrl'
-    });
-    $routeProvider.otherwise({
-	redirectTo : '/lists'
-    });
-} ]);
+config(['$routeProvider', function($routeProvider) {
+	$routeProvider.when('/add', {
+		templateUrl: 'partials/add.html',
+		controller: 'ListsCtrl'
+	});
+	
+	$routeProvider.when('/add/list', {
+		templateUrl: 'partials/list/add.html',
+		controller: 'ListAddCtrl'
+	});
+	
+	$routeProvider.when('/add/media', {
+		templateUrl: 'partials/media/add.html',
+		controller: 'MediaAddCtrl'
+	});
+	
+	$routeProvider.when('/add/person', {
+		templateUrl: 'partials/person/add.html',
+		controller: 'PersonAddCtrl'
+	});
+	
+	$routeProvider.when('/add/place', {
+		templateUrl: 'partials/place/add.html',
+		controller: 'PlaceAddCtrl'
+	});
+	
+	$routeProvider.when('/add/text', {
+		templateUrl: 'partials/text/add.html',
+		controller: 'TextAddCtrl'
+	});
+	
+	$routeProvider.when('/add/time', {
+		templateUrl: 'partials/time/add.html',
+		controller: 'TimeAddCtrl'
+	});
+	
+	$routeProvider.when('/lists', {
+		templateUrl: 'partials/view.html',
+		controller: 'ListsCtrl'
+	});
+	
+	$routeProvider.otherwise({
+		redirectTo: '/lists'
+	});
+}]);

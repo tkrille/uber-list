@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			uber-list
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="brand pull-right" href="#">uber-list</a>
+					<div class="nav-collapse collapse">
+						<a id="add" href="#" class="brand" data-toggle="popover" data-placement="bottom" data-html="true"
+						data-content='
+						<ul class="nav nav-list">
+							<li><a href="add_list.html"><i class="icon-list"></i>List</a></li>
+							<li><a href="add_text.html"><i class="icon-font icon-white"></i>Text</a></li>
+							<li><a href="add_time.html"><i class="icon-time"></i>Time</a></li>
+							<li><a href="add_place.html"><i class="icon-map-marker"></i>Place</a></li>
+							<li><a href="add_person.html"><i class="icon-user"></i>Person</a></li>
+							<li><a href="add_media.html"><i class="icon-picture"></i>Media</a></li>
+						</ul>
+						'>+</a>
+						<!-- <ul class="nav">
+							<li class="active">
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="#contact">Contact</a>
+							</li>
+						</ul> -->
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+		<div id="list" class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="accordion" id="accordion2">
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+									Collapsible Group Item #1
+									<span href="#" class="pull-right"><i class="icon-chevron-right"></i></span>
+								</a></li>
+							</div>
+							<div id="collapseOne" class="accordion-body collapse in">
+								<div class="accordion-inner">
+									Anim pariaturjkhsdfklhdsyfglhkxdf sdgfjksdfgkjhsdfg klhdfsghklsdfgkhljdsfghklj klhdfsghklj sdklh sdhkldfcliche...
+								</div>
+							</div>
+						</div>
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Collapsible Group Item #2</a>
+								<a>
+							</div>
+							<div id="collapseTwo" class="accordion-body collapse">
+								<div class="accordion-inner">
+									Anim pariatur cliche...
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/span-->
+			</div><!--/row-->
+		</div><!--/.fluid-container-->
+		<script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/custom.js" type="text/javascript"></script>
+	</body>
+</html>
