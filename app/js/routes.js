@@ -8,6 +8,11 @@ config(['$routeProvider', function($routeProvider) {
 		controller: 'AddCtrl'
 	});
 	
+	$routeProvider.when('/add/boolean', {
+		templateUrl: 'partials/boolean/add.html',
+		controller: 'BooleanAddCtrl'
+	});
+	
 	$routeProvider.when('/add/list', {
 		templateUrl: 'partials/list/add.html',
 		controller: 'ListAddCtrl'
@@ -16,6 +21,11 @@ config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/add/media', {
 		templateUrl: 'partials/media/add.html',
 		controller: 'MediaAddCtrl'
+	});
+	
+	$routeProvider.when('/add/number', {
+		templateUrl: 'partials/number/add.html',
+		controller: 'NumberAddCtrl'
 	});
 	
 	$routeProvider.when('/add/person', {

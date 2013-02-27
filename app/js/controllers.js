@@ -2,7 +2,7 @@
 
 angular.module('uber-list').
 
-controller('UberListCtrl', ['$scope', '$log', 'los4ng', 'EntryManager', 'testData', function($scope, $log, los4ng, entryManager, testData) {
+controller('UberListCtrl', ['$scope', '$log', 'los4ng', 'EntryManager', 'SemanticsManager', 'testData', function($scope, $log, los4ng, entryManager, testData) {
 	$scope.initialize = function() {
 		$log.log("initialize");
 		los4ng.clear();
@@ -65,6 +65,23 @@ controller('TemplatesCtrl', ['$scope', function($scope) {
 
 controller('AddCtrl', ['$scope', function($scope) {}]).
 
+controller('BooleanAddCtrl', ['$scope', function($scope) {
+	$scope.storeEntry = function(entry) {
+		console.log(entry);
+	};
+	
+	// @TODO get from semanticsmanager
+	// $scope.typeaheadValues = ;
+	$scope.entry = {
+		name: '',
+		options: {
+		},
+		type: 'boolean',
+		semantic: '',
+		parent: $scope.currentUuid,
+	};
+}]).
+
 controller('ListAddCtrl', ['$scope', function($scope) {
 	$scope.semantics = [];
 	$scope.entry = {
@@ -76,18 +93,50 @@ controller('ListAddCtrl', ['$scope', function($scope) {
 	};
 }]).
 
+controller('MediaAddCtrl', ['$scope', function($scope) {
+}]).
+
+controller('NumberAddCtrl', ['$scope', function($scope) {
+}]).
+
+controller('PersonAddCtrl', ['$scope', function($scope) {
+}]).
+
+controller('PlaceAddCtrl', ['$scope', function($scope) {
+}]).
+
 controller('TextAddCtrl', ['$scope', function($scope) {
-	$scope.storeEntry = function( entry ) {
+	$scope.storeEntry = function(entry) {
 		console.log(entry);
 	};
-
-	$scope.semantics = ['headline'];
+	
+	// @TODO get from SemanticsManager
+	// $scope.typeaheadValues = ;
+	console.log($scope);
 	$scope.entry = {
 		name: '',
 		options: {
 			type: 'single'
 		},
 		type: 'text',
+		semantic: '',
+		parent: $scope.currentUuid,
+	};
+}]).
+
+controller('TimeAddCtrl', ['$scope', function($scope) {
+	$scope.storeEntry = function(entry) {
+		console.log(entry);
+	};
+	
+	// @TODO get from semanticsmanager
+	// $scope.typeaheadValues = ;
+	$scope.entry = {
+		name: '',
+		options: {
+			type: 'date'
+		},
+		type: 'time',
 		semantic: '',
 		parent: $scope.currentUuid,
 	};

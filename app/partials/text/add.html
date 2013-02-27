@@ -15,8 +15,6 @@
 				
 				<ng-switch on="entry.options.type">
 					<div ng-switch-when="single">
-						<label>Text</label>
-						<input ng-model="value" type="text" placeholder="Type something">
 					</div>
 					<div ng-switch-when="multi">
 						<label>Text</label>
@@ -29,7 +27,7 @@
 				</ng-switch>
 				
 				<label>Semantic</label>
-				<input ng-model="entry.semantic" type="text" placeholder="e.g. headline">
+				<input ng-model="entry.semantic" type="text" placeholder="e.g. headline" typeahead>
 				
 				<button type="submit" class="btn">Submit</button>
 			</fieldset>
