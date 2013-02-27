@@ -1,27 +1,25 @@
 <!doctype html>
 <html lang="en" ng-app="uber-list" ng-controller="UberListCtrl">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Uber List</title>
-		<link href="css/angular-ui.css" rel="stylesheet" type="text/css" />
-		<!-- <link href="css/app.css" rel="stylesheet" type="text/css" /> -->
-		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
-		<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen" title="no title" charset="utf-8">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	</head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uber List</title>
+<link href="css/angular-ui.css" rel="stylesheet" type="text/css" />
+<!-- <link href="css/app.css" rel="stylesheet" type="text/css" /> -->
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen" title="no title"
+	charset="utf-8">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
 <body>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<button type="button" class="btn btn-navbar" >
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+				<button type="button" class="btn btn-navbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
-				<a id="add" href="#/add" class="brand">+</a>
-				<a class="brand pull-right" href="#">uber-list</a>
+				<a id="add" href="#/add" class="brand">+</a> <a class="brand pull-right" href="#">uber-list</a>
 				<div>
 					<ul class="nav">
 						<li><a href="#/lists">My Lists</a></li>
@@ -34,9 +32,15 @@
 	</div>
 
 	<div id="list" class="container-fluid" ng-view></div>
-	
+
 	<footer class="footer">
 		<div class="container">
+			<p>
+				<button ng-click="test();">Test</button>
+				<button ng-click="debug();">Debug</button>
+				<button ng-click="initialize();">Reset</button>
+				<button ng-click="clear();">Clear</button>
+			</p>
 		</div>
 	</footer>
 
@@ -55,11 +59,23 @@
 	<script type="text/javascript" src="lib/los4ng/los4ng.js"></script>
 
 	<script type="text/javascript" src="js/app.js"></script>
+
 	<script type="text/javascript" src="js/controllers.js"></script>
+	<script type="text/javascript" src="js/controllers/AddCtrl.js"></script>
+	<script type="text/javascript" src="js/controllers/ListsCtrl.js"></script>
+	<script type="text/javascript" src="js/controllers/SettingsCtrl.js"></script>
+	<script type="text/javascript" src="js/controllers/TemplatesCtrl.js"></script>
+	<script type="text/javascript" src="js/controllers/UberListCtrl.js"></script>
+
 	<script type="text/javascript" src="js/services.js"></script>
-	<script type="text/javascript" src="js/routes.js"></script>
+	<script type="text/javascript" src="js/services/EntryManager.js"></script>
+
 	<script type="text/javascript" src="js/directives.js"></script>
+	<script type="text/javascript" src="js/directives/UberListEntry.js"></script>
+
 	<script type="text/javascript" src="js/filters.js"></script>
+
+	<script type="text/javascript" src="js/routes.js"></script>
 
 	<script type="text/javascript" src="js/test-data.js"></script>
 </body>
