@@ -1,17 +1,28 @@
+/*
+ * UberListEntry.js
+ */
 'use strict';
 
-angular.module('uber-list.directives').directive('uberListEntry',
-        [ '$log', 'EntryManager', function($log, EntryTypeManager) {
-            var directiveDefinitionObject = {
-                template:   '<a ng-href="#/lists/{{ entry.uuid }}">' +
-                                '<small>{{ entry.type }}</small> {{ entry.name }}' +
-                                '<span class="pull-right"><i class="icon-chevron-right"></i></span>' +
-                            '</a>',
-                replace : true,
-                restrict : 'E',
-                scope : {
-                    entry: '=entry'
-                },
-            };
-            return directiveDefinitionObject;
-        } ]);
+(function(){
+    
+    /**
+     * 
+     */
+    angular.module('uber-list.directives').directive('uberListEntry', ['$log', 'EntryTypeManager', function($log, entryTypeManager) {
+        return {
+            templateUrl: 'partials/entry.html',
+            replace : true,
+            restrict : 'E',
+            scope : {
+                entry : '=entry',
+            },
+            link: function ($scope, elem, attrs, controller) {
+                $scope.entryData = entryTypeManager.getEntryData($scope.entry);
+            	
+                //$log.info("[uber-list.directives.uberListEntry#link()]");
+                //$log.info($scope);
+            },
+        };
+    }]);
+
+})();

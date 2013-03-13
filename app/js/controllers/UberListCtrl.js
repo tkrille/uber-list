@@ -2,7 +2,7 @@
 
 angular.module('uber-list.controllers').
 
-controller('UberListCtrl', ['$scope', '$log', 'los4ng', 'EntryManager', 'testData', function($scope, $log, los4ng, entryManager, testData) {
+controller('UberListCtrl', ['$scope', '$log', 'los4ng', 'EntryManager', 'EntryTypeManager',  'testData', function($scope, $log, los4ng, entryManager, entryTypeManager, testData) {
     $scope.initialize = function() {
         $log.log("initialize");
         los4ng.clear();
@@ -25,7 +25,11 @@ controller('UberListCtrl', ['$scope', '$log', 'los4ng', 'EntryManager', 'testDat
     };
     
     $scope.test = function() {
-        
+	var types = entryTypeManager.listEntryTypes();
+	
+	$log.info(types);
+	
+	types.push("a");
     };
 
     $scope.debug = function() {
