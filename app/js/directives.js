@@ -8,5 +8,5 @@ directive('typeahead', function($document) {
 		element.typeahead({
 			source: scope.typeaheadValues
 		});
-	}
+	};
 });
